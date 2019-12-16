@@ -112,9 +112,9 @@ body {
         <legend><b>Enter question text to classify question</b></legend>
         Question Text:
 		<br><br>
-        <input name="question_text" type="text" required>     
+        <input id="text_field" name="question_text" type="text" required>     
 
-        <center><input type="Submit" class="push_button blue"></center>
+        <center><input id="submit_button" type="Submit" class="push_button blue"></center>
     </fieldset>
 </form>
 </center>
@@ -129,6 +129,20 @@ body {
            <p style="font-size:50px">{{ result }}</p>
     {% endif %}
 </div>
+
+<script>
+Http = new XMLHttpRequest(); 
+async function submit_text(){  
+	var val=document.getElementById("text_field").value;  
+	var url='https://maker.ifttt.com/trigger/physicsquestion/with/key/chk6iEBFJImv_jZ8qHJb5B?value1=';
+		url+= val;
+		Http.open("GET", url);
+		Http.send();
+}
+document.getElementById("submit_button").addEventListener("click", function() {submit_text();}, false);
+
+
+</script>
 
 
 </html>
