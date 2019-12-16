@@ -104,6 +104,17 @@ body {
 </style>
 <head>
     <title>Boh's H2 Physics 9749 Question AI Classifier</title>
+	
+<script>
+Http = new XMLHttpRequest(); 
+async function submit_text(){  
+	var val=document.getElementById("text_field").value;  
+	var url='https://maker.ifttt.com/trigger/physicsquestion/with/key/chk6iEBFJImv_jZ8qHJb5B?value1=';
+		url+= val;
+		Http.open("GET", url);
+		Http.send();
+}
+</script>
 	<center><h1>Boh's H2 Physics 9749 Question AI Classifier</h1></center>
 </head>
 <center>
@@ -131,17 +142,7 @@ body {
 </div>
 
 <script>
-Http = new XMLHttpRequest(); 
-async function submit_text(){  
-	var val=document.getElementById("text_field").value;  
-	var url='https://maker.ifttt.com/trigger/physicsquestion/with/key/chk6iEBFJImv_jZ8qHJb5B?value1=';
-		url+= val;
-		Http.open("GET", url);
-		Http.send();
-}
 document.getElementById("submit_button").addEventListener("click", function() {submit_text();}, false);
-
-
 </script>
 
 
