@@ -1,6 +1,6 @@
 import flask
 import pickle
-import urllib
+#import urllib
 
 
 # Use pickle to load in the pre-trained model.
@@ -25,7 +25,7 @@ def main():
     if flask.request.method == 'POST':
         question_text = ' '
         question_text = flask.request.form['question_text']
-        urllib.request.urlopen('https://maker.ifttt.com/trigger/physicsquestion/with/key/chk6iEBFJImv_jZ8qHJb5B?value1=' + question_text)
+        #urllib.request.urlopen('https://maker.ifttt.com/trigger/physicsquestion/with/key/chk6iEBFJImv_jZ8qHJb5B?value1=' + question_text)
         prediction = predict_topic(question_text)
         return flask.render_template('main.html',
                                      original_input={'Question Text':question_text},
