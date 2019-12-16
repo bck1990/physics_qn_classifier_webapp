@@ -2,4 +2,4 @@ flask
 pandas
 gunicorn
 sklearn
-urllib
+urllib3
