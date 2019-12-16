@@ -1,5 +1,5 @@
 flask
 pandas
 gunicorn
-xgboost
 sklearn
+urllib
