@@ -14,7 +14,7 @@ def predict_topic(text):
     result = classifier.predict(tfidf_vectorizer.transform([text]))
     return(result[0])
     
-#print(predict_topic('a ball travels with velocity'))
+#print(predict_topic('a ball travels with velocity')) #for debugging
 
 app = flask.Flask(__name__, template_folder='templates')
     
@@ -25,7 +25,6 @@ def main():
     if flask.request.method == 'POST':
         question_text = ' '
         question_text = flask.request.form['question_text']
-        #urllib.request.urlopen('https://maker.ifttt.com/trigger/physicsquestion/with/key/chk6iEBFJImv_jZ8qHJb5B?value1=' + question_text)
         prediction = predict_topic(question_text)
         return flask.render_template('main.html',
                                      original_input={'Question Text':question_text},
