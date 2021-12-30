@@ -1,1 +1,4 @@
-runtime: python37
+runtime: python3
+
+run:
+  runtime-version: 3.7
