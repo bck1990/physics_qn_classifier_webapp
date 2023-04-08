@@ -6,4 +6,4 @@ Deployed live on https://physicsquestionsorter.up.railway.app/
 
 Feel free to try it out! You can enter questions or phrases like like "find the speed of ball..." or "an alpha particle..."
 
-The full app which requires the user to upload many physics papers in pdf to have all of them sorted is deployed here: https://physicspapersorter.herokuapp.com/. The The app returns a zipped folder of separate pdf files of the sorted questions, one for each topic.
+The full app which requires the user to upload many physics papers in pdf to have all of them sorted is deployed here: https://physicspapersorter.up.railway.app/. The The app returns a zipped folder of separate pdf files of the sorted questions, one for each topic.
